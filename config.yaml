@@ -1,0 +1,15 @@
+# config.yaml
+data:
+  zip_path: "data/raw/PAKDD2010.zip"
+  target_col: "TARGET_LABEL_BAD=1"
+
+model:
+  model_type: catboost
+  iterations: 100
+  learning_rate: 0.1
+  depth: 5
+  save_path: "models/catboost_model.cbm"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
