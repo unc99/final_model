@@ -6,7 +6,7 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
 
 from fastapi import FastAPI
-from predict import predict
+from src.predict import predict
 
 
 app = FastAPI()

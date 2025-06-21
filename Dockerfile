@@ -1,14 +1,14 @@
 # Базовый образ Python
-FROM python:3.10-slim
+FROM python:3.9-slim
 
-# Рабочая директория
+# Рабочая директория внутри контейнера
 WORKDIR /app
 
-# Копируем файлы
+# Копируем все файлы из текущей папки в контейнер
 COPY . /app/
 
 # Устанавливаем зависимости
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Запуск сервера
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# Запуск приложения
+CMD ["uvicorn", "app.app:app", "--host", "0.0.0.0", "--port", "8000"]
