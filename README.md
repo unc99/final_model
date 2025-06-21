@@ -13,3 +13,8 @@
 ### 1. Установите зависимости:
 ```bash
 pip install -r requirements.txt
+## Как запустить через Docker
+
+1. Собери образ:
+   ```bash
+   docker build -t credit-api .
