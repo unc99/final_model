@@ -1,0 +1,22 @@
+# Python cache 
+__pycache__/ 
+ 
+# Model files 
+models/* 
+ 
+# Data files 
+data/*.csv 
+ 
+# Jupyter Notebooks 
+.ipynb_checkpoints/ 
+*.ipynb 
+ 
+# Docker 
+*.log 
+*.pid 
+ 
+# IDE 
+.env 
+*.pyc 
+*.db 
+*.sqlite3 
