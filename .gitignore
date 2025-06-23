@@ -20,3 +20,4 @@ data/*.csv
 *.pyc 
 *.db 
 *.sqlite3 
+"data/" 
