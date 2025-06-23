@@ -1,19 +1,13 @@
-# app.py
-import sys
-import os
-
-# Добавляем src в PYTHONPATH
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
-
+# app/app.py
 from fastapi import FastAPI
+from src.api.schemas import ClientData  # ← проверяем этот импорт
 from src.predict import predict
-
 
 app = FastAPI()
 
 @app.post("/predict")
-def predict_api(data: dict):
-    result = predict(data)
+def predict_api(data: ClientData):
+    result = predict(data.dict())
     return result
 
 if __name__ == "__main__":
